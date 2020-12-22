@@ -1,0 +1,20 @@
+{
+  "name": "solano",
+  "version": "1.0.0",
+  "description": "solano's medical office",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "nodemon src/index.js"
+  },
+  "author": "github: @jheremois, Instagram: @shuniata_jc",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-env-file": "^0.1.8",
+    "pug": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}

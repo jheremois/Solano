@@ -1,0 +1,70 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Assistant';
+}
+a, button{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+header{
+    color: #F1F6F9;
+    background-color: #0050D5;
+}
+header nav{
+    display: flex;
+    padding: 10px 0px;
+    justify-content: space-between;
+    align-items: center;
+}
+header .top{
+    margin: 0px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+header .top button{
+    display: none;
+}
+header nav a{
+    font-size: 26px;
+    font-weight: 600;
+    color: #F1F6F9;
+    align-items: center;
+    display: flex;
+}
+header nav #options{
+    display: flex;
+    align-items: center;
+}
+header nav #options .option{
+    font-size: 15px;
+    padding: 2px 15px;
+}
+header nav #options .option p{
+    font-weight: 400;
+    border-bottom: 2px solid transparent;
+    transition-duration: 150ms;
+}
+header nav #options .option p:hover{
+    border-bottom: 2px solid #F1F6F9;
+}
+@media screen and (max-width: 768px){
+    header nav{ display: block;}
+    header nav .top button{ display: flex;}
+    header nav #options{
+        margin-top: 5px;
+        transition-duration: 290ms;
+        display: block;
+        height: 0px;
+        overflow: hidden;
+    }
+    header nav #options .option{ 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px 0px;
+    }
+}

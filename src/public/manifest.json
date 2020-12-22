@@ -1,0 +1,34 @@
+{
+    "name": "Solano",
+      "short_name": "Solano",
+    "description": "Solanos's Doctor office",
+    "background_color": "#0050D5",
+    "theme_color": "#F1F6F9",
+    "display": "standalone",
+    "start_url": "./?utm_source=web_app_manifest",
+    "scope": "./",
+    "lang": "en",
+    "icons": [
+        {
+          "src": "./images/logo/solano 1024.webp",
+          "sizes": "1024x1024",
+          "type": "image/png"
+        },
+        {
+          "src": "./images/logo/solano 512.webp",
+          "sizes": "512x512",
+          "type": "image/png"
+        },
+        {
+            "src": "./images/logo/solano 256.webp",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "./images/logo/solano 196.webp",
+            "sizes": "196x196",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+  }
