@@ -2,7 +2,9 @@
     margin: 0%;
     padding: 0%;
     font-family: 'Assistant';
+    scroll-behavior: smooth;
 }
+body{ height: 900px;}
 a, button{
     border: none;
     background-color: transparent;
@@ -15,6 +17,11 @@ header{
     background-color: #0050D5;
 }
 header nav{
+    transition-duration: 170ms;
+    background-color:  #0050D5;
+    z-index: 2;
+    position: fixed;
+    width: 100%;
     display: flex;
     padding: 10px 0px;
     justify-content: space-between;
@@ -40,7 +47,7 @@ header nav #options{
     align-items: center;
 }
 header nav #options .option{
-    font-size: 15px;
+    font-size: 16px;
     padding: 2px 15px;
 }
 header nav #options .option p{
@@ -51,11 +58,66 @@ header nav #options .option p{
 header nav #options .option p:hover{
     border-bottom: 2px solid #F1F6F9;
 }
+header .face{
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+header .face div{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+header .face #title{
+    padding: 120px 0px;
+    align-items: center;
+}
+header .face #title h2{
+    line-height: 40px;
+    font-size: 315%;
+}
+header .face #title h1{ font-size: 395%;}
+header .face #doct{
+    display: flex;
+    align-items: flex-end;
+}
+header .face #doct img{ width: 75%;}
+#about_us{
+    padding: 90px 40px;
+    display: flex;
+    background-color: #F1F6F9;
+}
+#about_us span{
+    width: 70%;
+    padding: 10px 0px;
+}
+#about_us span p{
+    padding-top: 15px;
+    font-size: 19px;
+    font-weight: 400;
+}
+#about_us span div{
+    display: flex;
+}
+#about_us span h2{
+    padding: 0px 3px;
+    line-height: 33px;
+    border-bottom: solid 4px #0050D5;
+    font-size: 34px;
+}
+#about_us .doctor{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#about_us .doctor img{
+    width: 65%;
+}
 @media screen and (max-width: 768px){
     header nav{ display: block;}
     header nav .top button{ display: flex;}
     header nav #options{
-        margin-top: 5px;
         transition-duration: 290ms;
         display: block;
         height: 0px;
@@ -66,5 +128,26 @@ header nav #options .option p:hover{
         justify-content: center;
         align-items: center;
         padding: 15px 0px;
+    }
+    header .face{
+        display: block;
+    }
+    header .face div{
+        width: 100%;
+    }
+    header .face #title{padding: 80px 0px;}
+    header .face #title h2{ font-size: 38px;}
+    header .face #title h1{ font-size: 50px;}
+    header .face #doct img{ width: 95%;}
+    #about_us{ display: block;}
+    #about_us span{ width: 100%;}
+    #about_us .doctor{
+        padding-top: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #about_us .doctor img{
+        width: 80%;
     }
 }
