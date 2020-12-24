@@ -12,6 +12,9 @@ a, button{
     cursor: pointer;
     text-decoration: none;
 }
+/*
+    header
+*/
 header{
     color: #F1F6F9;
     background-color: #0050D5;
@@ -82,6 +85,9 @@ header .face #doct{
     align-items: flex-end;
 }
 header .face #doct img{ width: 75%;}
+/*
+    about_us
+*/
 #about_us{
     padding: 90px 40px;
     display: flex;
@@ -113,6 +119,72 @@ header .face #doct img{ width: 75%;}
 }
 #about_us .doctor img{
     width: 65%;
+}
+/*
+    Services
+*/
+#services{
+    background-image: url('../images/service_bg.png');
+}
+#services .services{
+    display: flex;
+    justify-content: space-between;
+    padding: 90px;
+    background: rgb(0,80,213);
+    background: linear-gradient(180deg, rgba(0,80,213,0.714912991563813) 0%, rgba(0, 82, 213, 0.884) 100%);
+}
+#services .services #service{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: white;
+    box-shadow: 6px 7px 29px -3px #06214dc7;
+    color: #F1F6F9;
+    overflow: hidden;
+    height: 280px;
+    width: 27%;
+}
+#services .services #service .inside{
+    transition-duration: 800ms;
+    padding-top: 230px;
+}
+#services .services #service .inside:hover{ padding: 0px;}
+#services .services #service .inside h1{
+    color: #1a1a1a94;
+    transform: rotate(-90deg);
+    font-weight: 500;
+    text-align: center;
+    line-height: 0px;
+    animation-name: up_down;
+    animation-duration: 800ms;
+    animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+.rhinoplasty{ background-image: url('../images/rhinoplasty.webp');}
+.Liposuction{ background-image: url('../images/liposuction.webp');}
+.implants{ background-image: url('../images/implants.webp');}
+@keyframes up_down{
+    from{
+        transform: rotate(-90deg) translateX(35px);
+    }
+    to{
+        transform: rotate(-90deg) translateX(20px);
+
+    }
+  }
+#services .services #service .inside h2{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 50px;
+    background-color: #4377CF;
+}
+#services .services #service .inside p{
+    font-size: 17px;
+    padding: 20px 10px;
+    height: 240px;
+    background-color: #001b4683;
 }
 @media screen and (max-width: 768px){
     header nav{ display: block;}
@@ -147,7 +219,13 @@ header .face #doct img{ width: 75%;}
         display: flex;
         justify-content: center;
     }
-    #about_us .doctor img{
-        width: 80%;
+    #about_us .doctor img{ width: 80%;}
+    #services .services{ 
+        display: block;
+        padding: 90px 40px;
+    }
+    #services .services #service{
+        width: 100%;
+        margin: 40px 0px;
     }
 }
