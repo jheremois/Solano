@@ -20,6 +20,7 @@ a, button{
     cursor: pointer;
     text-decoration: none;
 }
+#bla h2, #bla p, #bla h1{ color: #061f47;}
 /*
     header
 */
@@ -160,9 +161,10 @@ header .face #doct img{ width: 75%;}
 }
 #services .services #service .inside:hover{ padding: 0px;}
 #services .services #service .inside h1{
-    color: #1a1a1a94;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1a1a1a73;
     transform: rotate(-90deg);
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
     line-height: 0px;
     animation-name: up_down;
@@ -196,6 +198,227 @@ header .face #doct img{ width: 75%;}
     height: 240px;
     background-color: #001b4683;
 }
+/*
+    values
+*/
+#values{
+    background-color: #F1F6F9;
+    padding: 90px;
+}
+#values .title{
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+#values .title hr{
+    margin: 0px 10px;
+    border: none;
+    border-top: 4px solid #0050D5;
+    width: 15%;
+}
+#values .title h1{
+    font-size: 34px;
+    line-height: 20px;
+    font-weight: 600;
+}
+#values .values{
+    padding: 70px 60px 0px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#values .values .value{
+    display: grid;
+    text-align: center;
+}
+#values .values .value .ima{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#values .values .value img{
+    width: 80%;
+}
+#values .values .value p{ 
+    color: #062E70;
+    padding: 10px 0px;
+    font-size: 15px;
+    font-weight: 600;
+}
+/*
+    location
+*/
+#location{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+.location{
+    width: 80%;
+    padding: 70px 0px;
+}
+#map{
+    background-color: #1c1c1e;
+    position: relative;
+    border: #0050D5 4px solid;
+    float: left;
+    margin: 0px 10px;
+    height: 390px;
+    width: 67%;
+}
+.location_content{
+    float: right;
+    width: 26%;
+}
+.location_content hr{
+    border-bottom: solid 4px #0050D5;
+    width: 150px;
+    margin-bottom: 20px;
+}
+.location_content h1{
+    color: #1c1c1e;
+    font-size: 40px;
+}
+.infos{
+    float: right;
+    width: 26%;
+}
+.in{
+    display: flex;
+}
+.in h1{
+    padding: 5% 0%;
+}
+.in h2{
+    padding: 7px 0px 0px 4px;
+    font-weight: 600;
+    color: #1c1c1ee5;
+    display: flex;
+    align-items: center;
+}
+.in h1{
+    color: #0050D5;
+    font-size: 50px;
+}
+
+
+
+
+
+footer{
+    background-color: #002053;
+}
+footer .title h2{
+    font-size: 29px;
+    font-weight: 500;
+    color: #F1F6F9;
+}
+#contact{
+    transition-duration: 900ms;
+    width: 80%;
+    padding: 10px 10%;
+    display: block;
+    justify-content: space-between;
+}
+#contact form{
+    transform: scale(0.98);
+    padding: 60px 0px;
+    color: #062E70;
+    display: grid;
+    align-items: flex-end;
+}
+#contact form label{
+    width: 100%;
+    font-size: 35px;
+    margin-right: 10px;  
+}
+#contact form input, textarea{
+    outline: none;
+    padding: 15px;
+    transform: translatey(-10px);
+    width: initial;
+    background-color: transparent;
+    border: solid 1px #147bf180;
+    transition-duration: 300ms;
+    resize: none;
+}
+#contact form input::placeholder, textarea::placeholder{
+    color: #dbdbdbab;
+}
+#contact form .place input:focus, #contact form .place textarea:focus{
+    border: solid 1px #147bf1d2;
+}
+#contact form .send{
+    float: right;
+}
+#contact form .send button{
+    border: none;
+    border-radius: 50px;  
+    margin: 20px 10px;   
+    width: 120px;
+    font-size: 20px;
+    font-weight: 300;
+    height: 40px;
+    background-color: #0050D5;
+    color: #ffffff;
+    cursor: pointer;
+}
+#contact form button{
+    float: right;
+}
+#form .title{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+#form .title h2{
+    padding: 0px;
+    padding-right: 8px;
+    width: auto;
+}
+.place{
+    margin: 10px 0px;
+    display: grid;
+}
+#contact form .place label{
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 17px;
+    background-color: #002053;
+    font-size: 11pt;
+    width: 65px;
+    color: #f5f9ffb6;
+}
+.social{
+    justify-content: center;
+    display: flex;
+}
+.medias, #contact .b_logo{
+    display: flex;
+    align-items: center;
+}
+.medias a{
+    margin: 20px;
+}
+.medias a img{
+    width: 30px;
+}
+.social .b_logo{
+    justify-content: center;
+}
+.b_logo img{
+    margin: 20px;
+    height: 30px
+}
+.dad{
+    overflow: hidden;
+    transform: scale(0.8);
+    transition-duration: 800ms;
+}
+
 @media screen and (max-width: 768px){
     header nav{ display: block;}
     header nav .top button{ display: flex;}
@@ -237,5 +460,30 @@ header .face #doct img{ width: 75%;}
     #services .services #service{
         width: 100%;
         margin: 40px 0px;
+    }
+    #values{
+        padding: 90px 40px;
+    }
+    #values .title hr{ width: 25%;}
+    #values .values .value img{
+        width: 60%;
+    }
+    #values .values{
+        padding: 70px 0px 0px 0px;
+    }
+    #location .location{
+        width: 85%;
+        display: block;
+        
+    }
+    .location_content,.infos, .infos .in{
+        float: none;
+        width: 90%;
+    }
+    #map{
+        transform: scale(1);
+        margin: 0px;
+        width: 100%;
+        height: 280px;
     }
 }

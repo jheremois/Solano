@@ -49,3 +49,21 @@ document.addEventListener('scroll', ()=>{
     // }
 
 })
+
+
+const map = L.map('map').setView([18.4223445, -68.9697735], 16)
+
+
+let icon = L.icon({
+
+    iconUrl: '../images/loca.png',
+
+    iconSize: [35, 35] 
+
+})
+
+
+L.tileLayer('http://b.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png').addTo(map)
+
+L.marker([18.4223445, -68.9697735], {icon: icon})
+    .addTo(map)
