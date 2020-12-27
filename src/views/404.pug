@@ -1,0 +1,21 @@
+extends home
+block options
+    a(href="/#home").option
+        p Home
+    a(href="/#about_us").option
+        p About us
+    a(href="/#services").option
+        p Services
+    a(href="/#values").option
+        p Values
+    a(href="/#contact").option
+        p Get in touch
+block tit
+    #title
+        span
+            h2 page not foud
+            h1 Error 404
+            p=`(${url})`
+    #doct
+        img(src="images/solano_404.svg", alt="Doctor")
+block main

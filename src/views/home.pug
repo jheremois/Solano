@@ -14,15 +14,21 @@
         link(rel="shortcut icon", href="images/logo/solano.ico", type="image/x-icon")
         link(rel="stylesheet", href="css/home.css")
         link(href='https://fonts.googleapis.com/css?family=Assistant' rel='stylesheet')
-        //-link(rel="manifest", href="manifest.json")
-        //-script(src="script.js")
+        link(rel="manifest", href="manifest.json")
+        script(src="script.js")
+        script(async src="https://www.googletagmanager.com/gtag/js?id=G-9L33ZXSFQQ")
+        script.
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-9L33ZXSFQQ');
         block heads
             title Solanos's Doctor office
-            meta(name="keywords" content="Solano's doctor office")
-            meta(name="description", content="Jc wallpapers. Free Wallpapers for everyone. jc wallpapers")
+            meta(name="keywords" content="Solano's doctor office, solano, dr solano, dr, doctor, dr-solano, doctor solano")
+            meta(name="description", content="The doctor solano medical office is the most recognized aesthetic surgery office in the country and throughout Latin America.")
     body
         header
-            nav
+            nav#header
                 .top
                     a(href="/").logo
                         <svg width="26" height="24" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,20 +42,136 @@
                             </defs>
                         </svg>
                         p Solano
-                    button#menu
+                    button(aria-label='onpen menu')#menu
                         svg(width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg")
                             path(d="M30 21.6666H0V24.1666H30V21.6666Z" fill="#F1F6F9")
                             path(d="M30 13.3334H0V15.8334H30V13.3334Z" fill="#F1F6F9")
                             path(d="M30 5H0V7.5H30V5Z" fill="#F1F6F9")
                 #options
-                    a(href="/").option
-                        p Home
-                    a(href="/").option
-                        p About us
-                    a(href="/").option
-                        p Services
-                    a(href="/").option
-                        p Values
-                    a(href="/").option
-                        p Get in touch
+                    block options
+                        a(href="#home").option
+                            p Home
+                        a(href="#about_us").option
+                            p About us
+                        a(href="#services").option
+                            p Services
+                        a(href="#values").option
+                            p Values
+                        a(href="#contact").option
+                            p Get in touch
+            .face#home
+                block tit
+                    #title
+                        span
+                            h2 WE CARE ABOUT
+                            h1 YOUR WELLNESS
+                    #doct
+                        img(src="images/doctor.svg", alt="Doctor")
+        block main
+            main
+                #about_us
+                    span
+                        div#bla
+                            h2 About us
+                        p The doctor solano medical office is the most recognized aesthetic surgery office in the country and throughout Latin America. Certified by the Ministry of Public Health to perform all kinds of surgical procedures and medicate patients. We care about providing a good service that keeps our clients safe and satisfied with their bodies. We have the support of the most prestigious and recognized brands of medicines and the highest quality medical instruments and the best brands.
+                    .doctor
+                        img(src="images/doctor_about.webp", alt="Doctor Solano")
+                #services
+                    .services
+                        #service.Liposuction
+                            .inside
+                                h1 〉
+                                h2 Liposuction
+                                p Liposuction is a surgical procedure that uses a suction technique to remove fat from specific areas of the body, such as the abdomen, hips, thighs, buttocks, arms, or neck. 
+                        #service.rhinoplasty
+                            .inside
+                                h1 〉
+                                h2 Rhinoplasty
+                                p Rhinoplasty can be performed in the surgeon's office, in a hospital, or in an outpatient surgery center, under local or general anesthesia, depending on the exact procedure and individual preferences. 
+                        #service.implants
+                            .inside
+                                h1 〉
+                                h2 Implants
+                                p An implant created to replace or enhance some missing biological structure. The surface of the implants can be made of: titanium, silicone, or apatite depending on which is more functional.
+                #values
+                    .title#bla
+                        hr
+                        h1 We are
+                        hr
+                    .values
+                        .value
+                            .ima
+                                img(src="images/secure.svg", alt="secure")
+                            p Secure
+                        .value
+                            .ima
+                                img(src="images/trustworthy.svg", alt="trustworthy")
+                            p Trustworthy
+                        .value
+                            .ima
+                                img(src="images/innovative.svg", alt="innovative")
+                            p Innovative
+                    .values
+                        .value
+                            .ima
+                                img(src="images/professionals.svg", alt="professionals")
+                            p Professionals
+                        .value
+                            .ima
+                                img(src="images/committed.svg", alt="committed")
+                            p Committed
+                        .value
+                            .ima
+                                img(src="images/careful.svg", alt="careful")
+                            p careful
+                footer
+                    #location
+                        .location
+                            .location_content
+                                h1 Location
+                                hr
+                            #map.dad
+                            .infos
+                                .in
+                                    h1 ·
+                                    h2 Open 24hrs
+                                .in
+                                    h1 ·
+                                    h2 7 days a week
+                                .in
+                                    h1 ·
+                                    h2 Fast service
+                    footer
+                        #contact
+                            form(action="/mail", method="post")#form
+                                .title
+                                    h2 Contact Me
+                                .place
+                                    label(for="name") Name:
+                                    input(type="name" name='name' id='name' placeholder='' required autocomplete="off")
+                                .place
+                                    label(for="e-mail") E-mail:
+                                    input(type="email" name='email' id='e-mail' placeholder='' required autocomplete="off")
+                                .place
+                                    label(for="subject") Subject:
+                                    input(type="text" name='subject' id='subject' placeholder='' required autocomplete="off")
+                                .place
+                                    label(for="message") Message:
+                                    textarea(name="message", cols="30", rows="6"  id='message' placeholder='' required)
+                                .send
+                                    button Send mail 
+                            .social
+                                .medias
+                                    a(href="https://www.linkedin.com/in/jheremy-ricardo-castro-guerrero-3a85521a0/" target='blank')
+                                        img(src="images/linkedin.svg", alt="linkedin")
+                                    a(href="https://github.com/jheremois" target='blank')
+                                        img(src="images/github.svg", alt="github")
+                                .b_logo 
+                                    img(src="images/logo.svg", alt="logo")
+                                .medias
+                                    a(href="https://www.instagram.com/shuniata_jc/" target='blank')
+                                        img(src="images/instagram.svg", alt="instagram")
+                                    a(href="https://twitter.com/jheremois" target='blank')
+                                        img(src="images/twitter.svg", alt="twitter")
+    script(src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js")
     script(src="js/home.js")
