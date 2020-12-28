@@ -24,9 +24,7 @@ for (let i = 0; i < option.length; i++) {
 
 menu.addEventListener('click', ()=> open_menu())
 
-/*
-    Header position
-*/
+//  Header position
 const header = document.getElementById('header')
 const title = document.getElementById('title')
 
@@ -50,20 +48,19 @@ document.addEventListener('scroll', ()=>{
 
 })
 
-
-const map = L.map('map').setView([18.4223445, -68.9697735], 16)
+const map = L.map('map').setView([18.4321968, -68.9723359], 16)
 
 
 let icon = L.icon({
 
     iconUrl: '../images/loca.png',
 
-    iconSize: [35, 35] 
+    iconSize: [35, 45] 
 
 })
 
 
 L.tileLayer('http://b.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png').addTo(map)
 
-L.marker([18.4223445, -68.9697735], {icon: icon})
+L.marker([18.4321968, -68.9723359], {icon: icon})
     .addTo(map)
